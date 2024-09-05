@@ -1,8 +1,10 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { validationResult } = require('express-validator');
-const { User } = require('../models/dataModels');
+const { User } = require('../models/dataModel');
 const { jwtSecret, jwtExpiration } = require('../config/authConfig');
+
+
 
 // Registro de usuario
 exports.register = async (req, res) => {
